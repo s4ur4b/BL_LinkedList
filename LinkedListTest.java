@@ -107,6 +107,22 @@ class LinkedList {
         }
     }
 
+    public void viewAtPosition(int pos){
+        Node t;
+        if (start == null)
+            System.out.println("List is already empty");
+        else if (pos<1 || pos>size)
+            System.out.println("Invalid position");
+        else {
+            t = start;
+            for (int i = 1; i < pos; i++) {
+                t = t.getNext();
+            }
+            System.out.println(" " + t.getData());
+        }
+
+    }
+
     public void deleteFirst(){
         if (start == null)
             System.out.println("List is already empty");
